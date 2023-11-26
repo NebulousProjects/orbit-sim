@@ -45,10 +45,10 @@ fn setup(
         PbrBundle {
             mesh: meshes.add(shape::Icosphere{ radius: 1.0 * PLANET_SIZE_MULT, subdivisions: 8 }.try_into().unwrap()),
             material: materials.add(Color::rgb_u8(144, 144, 255).into()),
-            transform: Transform::from_xyz(0.0, 0.0, 35.0),
+            transform: Transform::from_xyz(0.0, 0.0, 40.0),
             ..default()
         },
-        OrbitBody { mass: 100.0, velocity: Vec3 { x: 2850.0, y: 0.0, z: 0.0 } }
+        OrbitBody { mass: 100.0, velocity: Vec3 { x: 3000.0, y: 0.0, z: 0.0 } }
     ));
     
     // light
@@ -59,7 +59,7 @@ fn setup(
 
     // camera
     commands.spawn(Camera3dBundle {
-        transform: Transform::from_xyz(0.0, 800.0, 0.0).looking_at(Vec3::ZERO, Vec3::Y),
+        transform: Transform::from_xyz(0.0, 1200.0, 0.0).looking_at(Vec3::ZERO, Vec3::Y),
         ..default()
     });
 }

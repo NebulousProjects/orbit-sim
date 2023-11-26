@@ -84,6 +84,5 @@ fn update_movement(
 
         // update position
         transform.translation += (body.velocity * delta) / (M_PER_UNIT as f32);
-        println!("Translation {}, Velocity {}, Acceleration {}", transform.translation, body.velocity, acceleration);
     });
 }
